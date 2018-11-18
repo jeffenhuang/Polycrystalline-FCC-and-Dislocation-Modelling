@@ -3,8 +3,11 @@
 # SEBE, Glasgow Caledonian University, Unitied Kingdom, G4 0BA
 
 Content:
+
 1 Voronoi tessellation.
+
 The Voronoi polycrystalline structure integrated in LAMMPS.
+
 File name:
 region.h
 region.cpp
@@ -31,4 +34,33 @@ voronoi keywords args = nx ny nz
 	
 	nz = the integer number of cells in the z direction of this region
 	
+
+2 Dislocation
+
+The dislocation class is an object oriented model as a result of the dislocation recognition algorithm. This class will be instanced once a dislocation in MD model is recognised and will be updated if the dislocation has any changes in the current step.
+
+3 The pair of dislocation is used to calculate the dislocation potential based on the dislocation recognition method.
+
+There are two files: 
+
+pair\_dislocation.h
+pair\_dislocation.cpp
+
+3 Compute command
+
+The compute command in LAMMPS has been revised with a new style 'dislocation'. The usage of this command in LAMMPS is:
+
+compute ID group-ID style args
+
+    ID = user-assigned name for the computation
+    group-ID = ID of the group of atoms to perform the computation on
+    style = one of a list of possible style names (see below)
+    args = arguments used by a particular style
+
+
+The style is 'dislocation' added with a args to determine the cutoff radius in this computing as a parameter.
+
+For example:
+
+compute 1 all dislocation 3
 
