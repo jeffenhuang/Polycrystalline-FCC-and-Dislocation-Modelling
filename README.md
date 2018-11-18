@@ -39,7 +39,7 @@ voronoi keywords args = nx ny nz
 
 The dislocation class is an object oriented model as a result of the dislocation recognition algorithm. This class will be instanced once a dislocation in MD model is recognised and will be updated if the dislocation has any changes in the current step.
 
-3 The pair of dislocation is used to calculate the dislocation potential based on the dislocation recognition method.
+The pair of dislocation is used to calculate the dislocation potential based on the dislocation recognition method.
 
 There are two files: 
 
