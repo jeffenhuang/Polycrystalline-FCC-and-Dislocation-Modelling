@@ -35,18 +35,24 @@ voronoi keywords args = nx ny nz
 	nz = the integer number of cells in the z direction of this region
 	
 
-2 Dislocation
+2 Dislocation recognition
 
 The dislocation class is an object oriented model as a result of the dislocation recognition algorithm. This class will be instanced once a dislocation in MD model is recognised and will be updated if the dislocation has any changes in the current step.
+
+Dislocation file:
+dislocation.h
+dislocation.cpp
+
+3 Dislocation pair force
 
 The pair of dislocation is used to calculate the dislocation potential based on the dislocation recognition method.
 
 There are two files: 
 
-pair\_dislocation.h
-pair\_dislocation.cpp
+pair_dislocation.h
+pair_dislocation.cpp
 
-3 Compute command
+4 Compute command
 
 The compute command in LAMMPS has been revised with a new style 'dislocation'. The usage of this command in LAMMPS is:
 
@@ -64,3 +70,6 @@ For example:
 
 compute 1 all dislocation 3
 
+files:
+compute_dislocation.h
+compute_dislocation.cpp
